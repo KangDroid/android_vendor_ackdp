@@ -102,6 +102,11 @@ endif
 # KangDroid Misc Copying?
 PRODUCT_COPY_FILES += \
 	vendor/kdp/utils/KangDroid-Project_ChangeLog.txt:system/etc/CHANGELOG-KDP.txt \
+	
+# Ad blocker
+PRODUCT_COPY_FILES += \
+    vendor/kdp/prebuilt/common/etc/hosts.alt:system/etc/hosts.alt \
+    vendor/kdp/prebuilt/common/etc/hosts.og:system/etc/hosts.og
 
 # CM-specific init file
 PRODUCT_COPY_FILES += \
