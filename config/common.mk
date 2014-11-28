@@ -124,6 +124,11 @@ PRODUCT_COPY_FILES += \
 # This is CM!
 PRODUCT_COPY_FILES += \
     vendor/ackdp/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
+	
+# Let's include OtaUpdater Settings!
+PRODUCT_COPY_FILES += \
+    vendor/ackdp/config/permissions/com.otaudater.feature.xml:system/etc/permissions/com.otaudater.feature.xml \
+	vendor/ackdp/prebuilt/OtaUpdater.apk:system/app/OtaUpdater.apk
 
 # T-Mobile theme engine
 include vendor/ackdp/config/themes_common.mk
