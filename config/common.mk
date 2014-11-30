@@ -128,6 +128,7 @@ PRODUCT_COPY_FILES += \
 # Let's include OtaUpdater Settings!
 PRODUCT_COPY_FILES += \
     vendor/ackdp/config/permissions/com.otaudater.feature.xml:system/etc/permissions/com.otaudater.feature.xml \
+    vendor/ackdp/prebuilt/rom.ota.prop:system/rom.ota.prop \
 	vendor/ackdp/prebuilt/OtaUpdater.apk:system/app/OtaUpdater.apk
 
 # T-Mobile theme engine
