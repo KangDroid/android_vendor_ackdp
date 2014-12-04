@@ -159,6 +159,8 @@ PRODUCT_PACKAGES += \
     CMWallpapers \
     Apollo \
     CMFileManager \
+    CMAccount \
+    HALO \
     LockClock 
 
 # CM Hardware Abstraction Framework
