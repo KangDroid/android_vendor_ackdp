@@ -60,6 +60,11 @@ Android Closed KangDroid Project CHANGELOG
 * Fix Gapps Issue(Can't boot.)
 * Fix for HALO Applications.
 
+### ACKDP 1.4(Working In Progress! WIP!)
+* Added function:'Multi Window'
+* Remove function:'Floating Window' (Will add later.)
+* Launch MultiWindow instead of FloatingWindow when HALO Launches.(This is a probably bug, but I decided to use MultiWindow. That is more usefull.)
+
 
 CyanogenMod CHANGELOG (notable new features)
 ---------
