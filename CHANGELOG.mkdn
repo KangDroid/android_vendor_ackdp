@@ -1,11 +1,67 @@
-CyanogenMod
+Android Closed KangDroid Project
 ===============
+--Based on CyanogenMod. Powered by Android Open Source Project.
 
-Visit http://github.com/CyanogenMod for full source and git access.
+Visit http://github.com/KangDroid for full source and git access.
 
-Visit http://review.cyanogenmod.org for our Gerrit instance.
+Visit http://android.googlesource.com for full AOSP's source and git access.
 
-CHANGELOG (notable new features)
+Visit http://github.com/CyanogenMod for full source and git access
+
+Visit http://review.cyanogenmod.org for CM's Gerrit instance.
+
+Android Closed KangDroid Project CHANGELOG
+---------
+### D.P T1
+* Common:Intital Import of CyanogenMod
+* Add function:Lockscreen Blur, change Blury state.
+* Add Function:HALO
+* Fix some functions bugs.
+
+### D.P T2
+* Fix: When click HALO settings, it crashed.
+* Enabled Multi-User.
+* Enable Advanced reboot by default.
+* Add Function:ListView Animation, ListView Interporlator.
+
+### D.P T3
+* Fix: Scrolling Cache
+* Added Function: Add bridge to Toast Animation
+* Added Function: Control Volume Steps.
+* Added Function: Fliptile Animation.
+* Fix bug for these Functions.
+
+### D.P LT4(LastTest4)
+* Added New Recent UI. --Thanks to DokDo-Project.
+* Fix bugs for 'New Recent UI.'
+* Added Function: WakeLock Blocker
+* Merge CyanogenMod 11.0 (Updated to Newer Source.)
+* Fix compiliation Error.
+* Rework HALO.
+
+### ACKDP 1.1
+* Added New Function:Lockscreen Notifications.
+* Fix NPE(Null Pointer Exception), Fix compiliation Error.
+* Up-To-Date with CyanogenMod 11.0 (Merged)
+
+### ACKDP 1.2
+* Bump Version to 1.2
+* Rework Lockscreen Notification's Design.
+* Change CM PlatLogo to ACKDP PlatLogo
+* Up-To-Date with CyanogenMod 11.0
+* Fix bugs.
+
+### ACKDP 1.3
+* Support HALO Applications from AOSPA.
+* Add color Preference.
+* Fix NPE(Null Pointer Exception.)
+* Add ACKDP Otaupdater from OtaUpdater.
+* Fix ALOT of bugs.
+* Fix Gapps Issue(Can't boot.)
+* Fix for HALO Applications.
+
+
+CyanogenMod CHANGELOG (notable new features)
 ---------
 ### 11.0.0 M11
 * Common: Android 4.4.4 (Google)
