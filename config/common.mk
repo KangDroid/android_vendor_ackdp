@@ -86,6 +86,10 @@ endif
 # Copy over the changelog to the device
 PRODUCT_COPY_FILES += \
     vendor/ackdp/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
+    
+# Copy over the BugList to the device
+PRODUCT_COPY_FILES += \
+    vendor/ackdp/BUGLIST:system/etc/BUGLIST-ACKDP.txt
 
 # Backup Tool
 ifneq ($(WITH_GMS),true)
@@ -240,7 +244,7 @@ PRODUCT_VERSION_MINOR = 0
 PRODUCT_VERSION_MAINTENANCE = DP
 
 ACKDP_VERSION_MAJOR = 1
-ACKDP_VERSION_MINOR = 3
+ACKDP_VERSION_MINOR = 4
 # Set CM_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
 
 ifndef CM_BUILDTYPE
