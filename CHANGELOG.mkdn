@@ -65,6 +65,7 @@ Android Closed KangDroid Project CHANGELOG
 * Remove function:'Floating Window' (Will add later.)
 * Launch MultiWindow instead of FloatingWindow when HALO Launches.(This is a probably bug, but I decided to use MultiWindow. That is more usefull.)
 * Up-To-Date with Newest CM Source.(Fixes for MSim)
+* Add BugList Activity on Settings.
 
 CyanogenMod CHANGELOG (notable new features)
 ---------
