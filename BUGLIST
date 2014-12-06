@@ -1,0 +1,42 @@
+Android Closed KangDroid Project
+===============
+--Based on CyanogenMod. Powered by Android Open Source Project.
+
+Visit http://github.com/KangDroid for full source and git access.
+
+Visit http://android.googlesource.com for full AOSP's source and git access.
+
+Visit http://github.com/CyanogenMod for full CM's source and git access
+
+Visit http://review.cyanogenmod.org for CM's Gerrit instance.
+
+Android Closed KangDroid Project BUGLIST
+
+---------
+### D.P T1
+* Halo Crashes often.	-Fixed in D.P T1 (Late T1)
+
+### D.P T2
+* Not a bug but there was a some problem with Scrolling Cache.	-Fixed in D.P T3 (Early T3)
+
+### D.P T3
+* Fix for Fliptile.	-Fixed in D.P T3(late T3)
+
+### D.P LT4(LastTest4)
+* SystemUI crashes when launch Recent panel.	-Fixed in D.P LT4(late LT4)
+* SystemUI crashes when Launch Recent panel if screen is turned to long length.	-Fixed in ACKDP 1.1
+
+### ACKDP 1.1
+* Fix for Notification Null Pointer Exception.	-Fixed in ACKDP 1.1(late 1.1)
+
+### ACKDP 1.2
+* Fix CM's PlatLogo bugs(crashes sometime.)	-Fixed in ACKDP 1.2(late 1.2)
+
+### ACKDP 1.3
+* Fix another Lockscreen Notification.	-Fixed in ACKDP 1.3 (late 1.3)
+* Fix crash when gapps launced.	-Fixed in ACKDP 1.3 (late 1.3)
+* Fix ALOT of bugs.	-All solved in ACKDP 1.4(early 1.4)
+
+### ACKDP 1.4(Working In Progress! WIP!)
+* Can't launch Floating Window when tap HALO app. It doesnt crash but it launch as MultiWindow.	-NOT FIXED(FIXING)
+* There is no way to launch Floating Window.	-NOT FIXED(FIXING)

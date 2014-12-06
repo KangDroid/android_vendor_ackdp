@@ -6,7 +6,7 @@ Visit http://github.com/KangDroid for full source and git access.
 
 Visit http://android.googlesource.com for full AOSP's source and git access.
 
-Visit http://github.com/CyanogenMod for full source and git access
+Visit http://github.com/CyanogenMod for full CM's source and git access
 
 Visit http://review.cyanogenmod.org for CM's Gerrit instance.
 
@@ -64,7 +64,7 @@ Android Closed KangDroid Project CHANGELOG
 * Added function:'Multi Window'
 * Remove function:'Floating Window' (Will add later.)
 * Launch MultiWindow instead of FloatingWindow when HALO Launches.(This is a probably bug, but I decided to use MultiWindow. That is more usefull.)
-
+* Up-To-Date with Newest CM Source.(Fixes for MSim)
 
 CyanogenMod CHANGELOG (notable new features)
 ---------
