@@ -333,7 +333,8 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.cm.display.version=$(CM_DISPLAY_VERSION)
+  ro.cm.display.version=$(CM_DISPLAY_VERSION) \
+  ro.kdp.version=Developer Preview
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 
