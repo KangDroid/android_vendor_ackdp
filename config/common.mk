@@ -308,7 +308,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.version=$(CM_VERSION) \
   ro.cm.releasetype=$(CM_BUILDTYPE) \
   ro.modversion=$(CM_VERSION) \
-  ro.kdp.version=Developer\ Preview
+  ro.kdp.version=Developer-Preview
   ro.cmlegal.url=http://www.cyanogenmod.org/docs/privacy
 
 -include vendor/kdp-priv/keys/keys.mk
