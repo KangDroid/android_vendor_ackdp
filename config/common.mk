@@ -234,7 +234,7 @@ PRODUCT_VERSION_MAJOR = 12
 PRODUCT_VERSION_MINOR = 0
 PRODUCT_VERSION_MAINTENANCE = 0-RC0
 KDP_VERSION_MAJOR = 1
-KDP_VERSION_MINOR = 1
+KDP_VERSION_MINOR = 2
 
 # Set CM_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
 
@@ -275,7 +275,7 @@ ifdef CM_BUILDTYPE
 else
     # If CM_BUILDTYPE is not defined, set to UNOFFICIAL
     CM_BUILDTYPE := UNOFFICIAL
-	KDP_BUILDTYPE := DEVELOPER
+	KDP_BUILDTYPE := UNOFFICIAL
     CM_EXTRAVERSION :=
 	KDP_EXTRAVERSION := PREVIEW
 endif
@@ -304,16 +304,18 @@ else
     endif
 endif
 
+SET_CM_VERSION = CM-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)_$(shell date -u +%Y%m%d)
+
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.cm.version=$(CM_VERSION) \
+  ro.cm.version=$(SET_CM_VERSION) \
   ro.cm.releasetype=$(CM_BUILDTYPE) \
-  ro.modversion=$(CM_VERSION) \
-  ro.kdp.version=Developer-Preview
+  ro.modversion=$(SET_CM_VERSION) \
+  ro.kdp.version=$(CM_VERSION)
   ro.cmlegal.url=http://www.cyanogenmod.org/docs/privacy
 
 -include vendor/kdp-priv/keys/keys.mk
 
-CM_DISPLAY_VERSION := $(CM_VERSION)
+CM_DISPLAY_VERSION := $(SET_CM_VERSION)
 
 ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),)
 ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
