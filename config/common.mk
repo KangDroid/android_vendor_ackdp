@@ -304,7 +304,7 @@ else
     endif
 endif
 
-SET_CM_VERSION = CM-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)_$(shell date -u +%Y%m%d)
+SET_CM_VERSION = CM-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)_$(shell date -u +%Y%m%d)-$(CM_BUILD)
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.version=$(SET_CM_VERSION) \
