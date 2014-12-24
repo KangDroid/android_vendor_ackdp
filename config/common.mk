@@ -71,7 +71,7 @@ PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 # Enable ADB authentication
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
 endif
 
 # Chromium Prebuilt
@@ -230,7 +230,7 @@ PRODUCT_VERSION_MAJOR = 12
 PRODUCT_VERSION_MINOR = 0
 PRODUCT_VERSION_MAINTENANCE = 0-RC0
 KDP_VERSION_MAJOR = 1
-KDP_VERSION_MINOR = 2
+KDP_VERSION_MINOR = 3
 
 # Set CM_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
 
