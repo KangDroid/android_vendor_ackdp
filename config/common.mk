@@ -130,6 +130,10 @@ PRODUCT_COPY_FILES += \
 # This is CM!
 PRODUCT_COPY_FILES += \
     vendor/kdp/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
+	
+ifeq ($(CHANGELOG),true)
+	./vendor/kdp/utils/gen_changelog
+endif
 
 # T-Mobile theme engine
 include vendor/kdp/config/themes_common.mk
