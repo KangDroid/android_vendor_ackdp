@@ -3,6 +3,7 @@
 # Exports
 
 export Changelog=Changelog.txt
+export ds=$PWD
 
 if [ -f $Changelog ];
 then
@@ -30,5 +31,5 @@ done
 
 sed -i 's/project/   */g' $Changelog
 
-cp $Changelog $OUT/system/etc/KangDroid-Project_ChangeLog.txt
+cp $Changelog $ds/vendor/kdp/utils/KangDroid-Project_ChangeLog.txt
 rm $Changelog

@@ -82,6 +82,9 @@ endif
 # Copy over the changelog to the device
 PRODUCT_COPY_FILES += \
     vendor/kdp/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
+	
+PRODUCT_COPY_FILES += \
+	vendor/kdp/utils/KangDroid-Project_ChangeLog.txt:system/etc/KangDroid-Project_ChangeLog.txt
 
 # HFM Files
 PRODUCT_COPY_FILES += \
@@ -130,10 +133,6 @@ PRODUCT_COPY_FILES += \
 # This is CM!
 PRODUCT_COPY_FILES += \
     vendor/kdp/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
-	
-ifeq ($(CHANGELOG),true)
-	./vendor/kdp/utils/gen_changelog
-endif
 
 # T-Mobile theme engine
 include vendor/kdp/config/themes_common.mk
