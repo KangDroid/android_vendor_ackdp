@@ -320,6 +320,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.releasetype=$(CM_BUILDTYPE) \
   ro.modversion=$(SET_CM_VERSION) \
   ro.kdp.version=$(CM_VERSION)	\
+  ro.secret.version=KDP21	\
   ro.cmlegal.url=http://www.cyanogenmod.org/docs/privacy
   
 -include vendor/kdp-priv/keys/keys.mk
