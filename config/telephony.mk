@@ -1,6 +1,12 @@
-# World APN list
+# World APN list, Device Hammerhead will be override with Google's Stock APN.
+ifeq ($(TARGET_IS_HAMMERHEAD),true)
+
+PRODUCT_COPY_FILES += \
+    vendor/kdp/prebuilt/common/etc/hammerhead-apns-conf.xml:system/etc/apns-conf.xml
+else
 PRODUCT_COPY_FILES += \
     vendor/kdp/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+endif
 
 # World SPN overrides list
 PRODUCT_COPY_FILES += \
