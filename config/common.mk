@@ -170,7 +170,8 @@ PRODUCT_PACKAGES += \
     LockClock \
     CMUpdater \
     CMAccount \
-    CMHome
+    CMHome \
+	CyanogenSetupWizard
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
