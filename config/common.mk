@@ -86,6 +86,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	vendor/kdp/utils/KangDroid-Project_ChangeLog.txt:system/etc/KangDroid-Project_ChangeLog.txt
 
+# Copy Over the Buglist to the device
+PRODUCT_COPY_FILES += \
+	vendor/kdp/buglist:system/etc/KangDroid-Project_BugList.txt
+
 # HFM Files
 PRODUCT_COPY_FILES += \
 	vendor/kdp/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
