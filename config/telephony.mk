@@ -16,13 +16,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/kdp/prebuilt/common/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
 
-
 # Telephony packages
 PRODUCT_PACKAGES += \
     Mms \
     Stk \
     CellBroadcastReceiver \
-    VoiceDialer \
     WhisperPush
 
 # Mms depends on SoundRecorder for recorded audio messages
