@@ -214,6 +214,10 @@ PRODUCT_PACKAGES += \
     sshd_config \
     ssh-keygen \
     start-ssh
+	
+# Wake On Lan
+PRODUCT_PACKAGES += \
+	wakeonlan
 
 # rsync
 PRODUCT_PACKAGES += \
