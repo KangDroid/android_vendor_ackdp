@@ -15,5 +15,5 @@
 -->
 
 <permissions>
-    <feature name="com.otaupdater.ota_feature" />
+    <feature name="com.ackdp.otaupdater.ota_feature" />
 </permissions>

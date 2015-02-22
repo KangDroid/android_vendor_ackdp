@@ -80,9 +80,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/kdp/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
 	
+# KangDroid Misc Copying?
 PRODUCT_COPY_FILES += \
 	vendor/kdp/utils/KangDroid-Project_ChangeLog.txt:system/etc/KangDroid-Project_ChangeLog.txt \
-	vendor/kdp/config/permissions/com.otaudater.feature.xml:system/etc/permissions/com.otaudater.feature.xml 
+	vendor/kdp/config/permissions/com.ackdp.otaupdater.feature.xml:system/etc/permissions/com.ackdp.otaupdater.feature.xml
 
 # Copy Over the Buglist to the device
 PRODUCT_COPY_FILES += \
