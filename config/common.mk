@@ -84,7 +84,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	vendor/kdp/utils/KangDroid-Project_ChangeLog.txt:system/etc/KangDroid-Project_ChangeLog.txt \
 	vendor/kdp/config/permissions/com.ackdp.otaupdater.feature.xml:system/etc/permissions/com.ackdp.otaupdater.feature.xml \
-	vendor/kdp/prebuilt/etc/props/rom.ota.prop:system/etc/ota/rom.ota.prop
+	vendor/kdp/prebuilt/etc/props/rom.ota.prop:system/etc/ota/rom.ota.prop \
+	vendor/kdp/prebuilt/app/app-release.apk:system/app/OtaUpdater.apk
 
 # Copy Over the Buglist to the device
 PRODUCT_COPY_FILES += \
