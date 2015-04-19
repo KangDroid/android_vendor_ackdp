@@ -99,6 +99,10 @@ PRODUCT_COPY_FILES += \
     vendor/kdp/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 endif
 
+# KangDroid Misc Copying?
+PRODUCT_COPY_FILES += \
+	vendor/kdp/utils/KangDroid-Project_ChangeLog.txt:system/etc/CHANGELOG-KDP.txt \
+
 # CM-specific init file
 PRODUCT_COPY_FILES += \
     vendor/kdp/prebuilt/common/etc/init.local.rc:root/init.cm.rc
