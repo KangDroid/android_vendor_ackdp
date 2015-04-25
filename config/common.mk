@@ -131,7 +131,8 @@ include vendor/kdp/config/themes_common.mk
 PRODUCT_PACKAGES += \
     Development \
     LatinIME \
-    BluetoothExt
+    BluetoothExt \
+    Profiles
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
@@ -297,7 +298,7 @@ SET_CM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date
 
 ifeq ($(KDP_BUILD_TYPE), release)
 	KDP_PRODUCT_VERSION_MAINTENANCE := RC1
-	CM_VERSION := $(KDP_VERSOIN_MAJOR).$(KDP_VERSION_MINOR).$(KDP_PRODUCT_VERSION_MAINTENANCE)-$(CM_BUILD)
+	CM_VERSION := $(KDP_VERSOIN_MAJOR).$(KDP_VERSION_MINOR)-$(KDP_PRODUCT_VERSION_MAINTENANCE)-$(CM_BUILD)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
