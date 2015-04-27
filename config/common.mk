@@ -308,6 +308,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.kdp.version=$(CM_VERSION) \
   ro.kdp.secret.version=KDP50 \
   ro.cmlegal.url=https://cyngn.com/legal/privacy-policy
+  
+# OTA Updater
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.ota.romname=KangDroid-Project \
+  ro.ota.version=$(shell date -u +%Y%m%d) \
+  ro.ota.manifest=https://romhut.com/roms/kangdroid-project/ota.xml
 
 -include vendor/kdp-priv/keys/keys.mk
 
