@@ -155,6 +155,7 @@ PRODUCT_PACKAGES += \
     Eleven \
     LockClock \
     CMHome \
+	OTAUpdates
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
