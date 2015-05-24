@@ -21,4 +21,8 @@ include vendor/pa/configs/bootanimation.mk
 include vendor/pa/configs/version.mk
 include vendor/pa/configs/themes_common.mk
 
+# Inherit sabermod vendor
+SM_VENDOR := vendor/sm
+include $(SM_VENDOR)/Main.mk
+
 
