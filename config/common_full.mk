@@ -4,9 +4,6 @@ $(call inherit-product, vendor/kdp/config/common.mk)
 # Include CM audio files
 include vendor/kdp/config/cm_audio.mk
 
-# Include CM LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/kdp/overlay/dictionaries
-
 # Optional CM packages
 PRODUCT_PACKAGES += \
     Galaxy4 \
