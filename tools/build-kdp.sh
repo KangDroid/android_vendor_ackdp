@@ -29,8 +29,9 @@ usage() {
 	echo -e "	--reset=yes|no  Reset repository before build(Default yes)"
 	echo -e "	--sync=yes|no  Sync repository before build(Default yes)"
 	echo -e "	--block=yes|no  no block update on ota zip.(Defualt NO)"
+	echo -e "   --device=*  Set devices, only codename, etc --device=shamu"
 	echo -e "${bldblu}  Example:${bldcya}"
-    echo -e "    ./build-kdp.sh --clean --reset --sync -j32 shamu"
+    echo -e "    ./build-kdp.sh --clean=yes --reset=yes --sync=no -j32 --device=shamu"
 }
 
 # Figure out the output directories
@@ -42,6 +43,7 @@ ARG_CLEAN_OPT=yes
 ARG_RESET_OPT=yes
 ARG_SYNC_OPT=yes
 ARG_BLOCK_OTA=no
+ARG_DEVICE=
 ARG_JTHREAD_OPT=$(grep "^processor" /proc/cpuinfo -c)
 
 # Check directories
@@ -76,7 +78,10 @@ while [ $# -gt 0 ]; do
     --block=yes | --block=no)
       ARG_BLOCK_OTA="${ARG#*=}"
       ;;
-    -j*)
+    --device=*)
+      ARG_DEVICE="${ARG#*=}"
+      ;;
+    -j=*)
       ARG_JTHREAD_OPT="${ARG#*=}"
       ;;
     *)
@@ -85,12 +90,6 @@ while [ $# -gt 0 ]; do
       ;;
   esac
 done
-
-shift $((OPTIND-1))
-if [ "$#" -ne 1 ]; then
-    usage
-fi
-device="$1"
 
 # Set Out directory
 export OUT_DIR=${ARG_PREFIX_DIR}
@@ -115,7 +114,7 @@ if [ "x${ARG_RESET_OPT}" = "xyes" ]; then
 fi
 
 # Starting build
-echo "Starting build for ($device)"
+echo "Starting build for ($ARG_DEVICE)"
 
 if [ "x${ARG_BLOCK_OTA}" = "xyes" ]; then
 	cd $DIR
@@ -125,7 +124,9 @@ else
 	. build/envsetup.sh
 fi
 
-lunch kdp_${device}-userdebug
+# Make changeLog
+vendor/kdp/utils/gen_changelog
+lunch kdp_${ARG_DEVICE}-userdebug
 mka bacon -j${ARG_JTHREAD_OPT}
 
 
