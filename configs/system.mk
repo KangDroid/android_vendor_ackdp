@@ -27,6 +27,13 @@ PRODUCT_COPY_FILES += \
 # APN
 PRODUCT_COPY_FILES += \
     vendor/$(VENDOR)/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
+		
+# Su support
+PRODUCT_PACKAGES += \
+	su
+	
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=0
 
 # Gapps backup script
 #PRODUCT_COPY_FILES += \
