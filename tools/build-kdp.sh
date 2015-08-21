@@ -30,6 +30,8 @@ usage() {
 	echo -e "	--sync=yes|no  Sync repository before build(Default yes)"
 	echo -e "	--block=yes|no  no block update on ota zip.(Defualt NO)"
 	echo -e "   --device=*  Set devices, only codename, etc --device=shamu"
+	echo -e "	--rom-gcc-version=*	 Set ROM GCC Version(EG: --rom-gcc-version=4.9, default to 4.9)"
+	echo -e "	--kernel-gcc-version=*	Set Kernel GCC Version(EG: --kernel-gcc-version=5.2, default to 5.2)"
 	echo -e "${bldblu}  Example:${bldcya}"
     echo -e "    ./build-kdp.sh --clean=yes --reset=yes --sync=no -j32 --device=shamu"
 }
@@ -81,6 +83,12 @@ while [ $# -gt 0 ]; do
     --device=*)
       ARG_DEVICE="${ARG#*=}"
       ;;
+	--rom-gcc-version=*)
+	  ARG_ROM_GCC_VERSION="${ARG#*=}"
+	  ;;
+	--kernel-gcc-version=*)
+   	  ARG_KERNEL_GCC_VERSION="${ARG#*=}"
+	  ;;
     -j=*)
       ARG_JTHREAD_OPT="${ARG#*=}"
       ;;
@@ -94,6 +102,25 @@ done
 # Set Out directory
 export OUT_DIR=${ARG_PREFIX_DIR}
 echo "Out directory set to: ($ARG_PREFIX_DIR)"
+
+# Set SaberMod GCC Versoins
+if [ "${ARG_ROM_GCC_VERSION}" = "4.8" ]; then
+	echo "Settings Rom GCC version as 4.8."
+	export TARGET_SM_AND=4.8
+else if [ "${ARG_ROM_GCC_VERSION}" = "4.9" ]; then
+	echo "Settings Rom GCC Version as 4.9"
+	export TARGET_SM_AND=4.9
+else if [ "${ARG_ROM_GCC_VERSION}" = "5.1" ]; then
+	echo "Setting Rom GCC Version as 5.1"
+	export TARGET_SM_AND=5.1
+else if [ "${ARG_ROM_GCC_VERSION}" = "5.2" ]; then
+	echo "Setting Rom GCC Version as 5.2"
+	export TARGET_SM_AND=5.2
+else if [ "${ARG_ROM_GCC_VERSION}" = "6.0" ]; then
+	echo "WARNING: 6.0 ROM GCC IS NOT RECOMANDED, Setting Rom GCC Version as 6.0"
+else
+	echo "Setting Rom GCC as 4.9(Stable)"
+fi
 
 # Cleaning options
 if [ "x${ARG_CLEAN_OPT}" = "xyes" ]; then
