@@ -156,7 +156,8 @@ PRODUCT_PACKAGES += \
     Eleven \
     LockClock \
     CMHome \
-	OTAUpdates
+	OTAUpdates \
+    CMSettingsProvider
 
 # CM Platform Library
 PRODUCT_PACKAGES += \
